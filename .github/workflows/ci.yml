@@ -1,0 +1,12 @@
+name: CI - Build Docker Compose (Infra)
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build all services with Docker Compose
+        run: docker-compose -f docker-compose.yml build
