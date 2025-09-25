@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  server:
+    build: ../cloudkaropay-server
+    ports:
+      - "3000:3000"
+  chatbot:
+    build: ../cloudkaropay-chatbot
+    ports:
+      - "4000:4000"
